@@ -1,0 +1,1 @@
+pandoc -s ./markdown/20160930.md -o ./html/20160930.html -c stylesheets/style.css
