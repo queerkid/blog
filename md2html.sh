@@ -7,4 +7,4 @@ for md in ./articles/markdown/*.md; do
 done
 
 read comment
-git commit $comment
+git add -A && git commit -m "${comment}"       
