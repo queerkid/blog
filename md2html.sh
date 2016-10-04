@@ -6,5 +6,5 @@ for md in ./articles/markdown/*.md; do
     pandoc -s "$md" -o ./articles/html/${fn}.html -c ../stylesheets/style.css
 done
 
-read comment
-git add -A && git commit -m "${comment}" && git push   
+
+git add -A && git commit -m "lalala" && git push   
