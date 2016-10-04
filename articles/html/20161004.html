@@ -9,12 +9,24 @@
   <link rel="stylesheet" href="../stylesheets/style.css" type="text/css" />
 </head>
 <body>
+<blockquote>
+<p>烟花灿烂，只可远观？</p>
+</blockquote>
 <p>今天闲来无事用racket实现了<a href="http://www.ruanyifeng.com/blog/2010/10/why_lisp_is_superior.html">&lt;<黑客与画家>&gt;</a>中的那个“神奇”的要求。</p>
 <p>代码如下：</p>
 <pre><code>(define (foo n)
     (lambda (i) (begin (set! n (+ n 1)) n)))</code></pre>
-<p>      </p>
+<p>对了，前几天实现了。</p>
+<p>C# ：</p>
+<pre><code>Func&lt;dynamic, Func&lt;dynamic, dynamic&gt;&gt; foo = n =&gt; i =&gt; n += i;</code></pre>
+<p>还有F# ：</p>
+<pre><code>let inline foo n = fun i -&gt; n + i</code></pre>
+<p><strong>其实我不太确定上面的写法是否符合题目的要求，非要用+=运算符吗？适用的类型又有哪些要求呢？ C#版本至少能实现数值类型和字符串类型的运算，还能实现timespan类型的相加，还能实现datime加timespan类型(必须是datetime在前，timespan在后)。 还有python的实现版本可以实现list相加，ruby的版本可以实现array相加，js的实现版本虽然能使array相加，可是结果却是string。</strong></p>
+<p> </p>
 <h2 id="今日疑惑">今日疑惑：</h2>
 <pre><code>1. 有没有办法直接定位到我分享的某个链接的页面里的某个位置的办法呢。</code></pre>
+<blockquote>
+<p>愿能观万事而晓大道</p>
+</blockquote>
 </body>
 </html>
