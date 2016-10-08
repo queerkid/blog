@@ -22,10 +22,11 @@
 <p>还有F# ：</p>
 <pre><code>let inline foo n = fun i -&gt; n + i</code></pre>
 <p>再来个Haskell版本的：</p>
-<pre><code>~~let f n = (\i -&gt; n + i)~~
+<pre><code>--let f n = (\i -&gt; n + i)
 --好吧，我错了，其实这么写就可以：
 let f n i = n + i
---这是看趣学指南时想到的，试了下hlint告诉我这么写才是对的，🙄。</code></pre>
+--这是看趣学指南时想到的，试了下hlint告诉我这么写才是对的，🙄。
+--自动柯里化成一个返回函数的函数。哈哈哈。</code></pre>
 <p>2333，最近专业业余研究哈思考，哈哈哈哈。</p>
 <p><strong>其实我不太确定上面的写法是否符合题目的要求，非要用+=运算符吗？适用的类型又有哪些要求呢？（我又想到，纯函数式的PL变量是不可变类型，就不能用自增之类的操作符啊啊啊……） C#版本至少能实现数值类型和字符串类型的运算，还能实现timespan类型的相加，还能实现datime加timespan类型(必须是datetime在前，timespan在后)。 还有python的实现版本可以实现list相加，ruby的版本可以实现array相加，js的实现版本虽然能使array相加，可是结果却是string。</strong></p>
 <p> </p>

@@ -7,4 +7,4 @@ for md in ./articles/markdown/*.md; do
 done
 
 
-git add -A && git commit -m "lalala" && git push   
+git add -A && git commit -m "lalala" && git push   && xdg-open "http:techrat.xyz"
