@@ -20,7 +20,10 @@
 <p>C# ：</p>
 <pre><code>Func&lt;dynamic, Func&lt;dynamic, dynamic&gt;&gt; foo = n =&gt; i =&gt; n += i;</code></pre>
 <p>还有F# ：</p>
-<p>// let inline foo n = fun i -&gt; n + i // 好吧，我错了，其实这么写就可以： let f n i = n + i 再来个Haskell版本的：</p>
+<pre><code>// let inline foo n = fun i -&gt; n + i
+// 好吧，我错了，其实这么写就可以：
+let f n i = n + i</code></pre>
+<p>再来个Haskell版本的：</p>
 <pre><code>--let f n = (\i -&gt; n + i)
 --好吧，我错了，其实这么写就可以：
 let f n i = n + i
