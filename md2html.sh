@@ -10,8 +10,10 @@ for md in ./articles/markdown/*.md; do
     articlelist+=$node
 done
 
+#splicing file
 cat ./head.html > index.html
 echo $articlelist >> index.html 
 cat ./foot.html >> index.html
 
+# go github and look my blog
 git add -A && git commit -m "lalala" && git push   && xdg-open "http:techrat.xyz"
