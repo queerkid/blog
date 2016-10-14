@@ -14,7 +14,7 @@
 ```
 &emsp;&emsp;&emsp;&emsp;on Haskell:
 ```
-        Control.Monad.replicateM_ 10 $ print "Hello World"
+        Control.Monad.replicateM_ 10 $ putStrLn "Hello World."
         --running on ghci
 ```
 
