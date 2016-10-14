@@ -15,7 +15,7 @@
 &emsp;&emsp;&emsp;&emsp;on Haskell:
 ```
         Control.Monad.replicateM_ 10 $ print "Hello World"
-        -- running on ghci
+        --running on ghci
 ```
 
 > 废话对我来来说就是：这很对，但我知道。
