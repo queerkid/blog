@@ -9,15 +9,13 @@
 
 &emsp;&emsp;&emsp;&emsp;on C#:
 ```
-        Action pr_hw = () =>WriteLine("Hello World.");
-        Enumerable.Range(0,10).ToList().ForEach(i=>pr_hw());
+        Enumerable.Range(0,10).ToList().ForEach(i=>Console.WriteLine("Hello World."));
+        //running on mono-csharp-shell
 ```
 &emsp;&emsp;&emsp;&emsp;on Haskell:
 ```
-        let pr_hw = print "Hello World"
-        replicateM_ 10 pr_hw
-        -- or
-        let rep10pr_hw = replicateM_ 10 $ print "Hello World"
+        Control.Monad.replicateM_ 10 $ print "Hello World"
+        -- running on ghci
 ```
 
 > 废话对我来来说就是：这很对，但我知道。

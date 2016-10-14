@@ -23,13 +23,11 @@
 <li>repeat do something:</li>
 </ol>
 <p>    on C#:</p>
-<pre><code>        Action pr_hw = () =&gt;WriteLine(&quot;Hello World.&quot;);
-        Enumerable.Range(0,10).ToList().ForEach(i=&gt;pr_hw());</code></pre>
+<pre><code>        Enumerable.Range(0,10).ToList().ForEach(i=&gt;Console.WriteLine(&quot;Hello World.&quot;));
+        //running on mono-csharp-shell</code></pre>
 <p>    on Haskell:</p>
-<pre><code>        let pr_hw = print &quot;Hello World&quot;
-        replicateM_ 10 pr_hw
-        -- or
-        let rep10pr_hw = replicateM_ 10 $ print &quot;Hello World&quot;</code></pre>
+<pre><code>        Control.Monad.replicateM_ 10 $ print &quot;Hello World&quot;
+        -- running on ghci</code></pre>
 <blockquote>
 <p>废话对我来来说就是：这很对，但我知道。</p>
 </blockquote>
