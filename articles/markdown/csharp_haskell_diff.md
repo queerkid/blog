@@ -7,17 +7,19 @@
 
 1. repeat do something:
 
-&emsp;&emsp;&emsp;&emsp;on C#:
-```
-        //running on mono-csharp-shell
-        Enumerable.Range(0,10).ToList().ForEach(i=>Console.WriteLine("Hello World."));
-        
-```
 &emsp;&emsp;&emsp;&emsp;on Haskell:
 ```
         --running on ghci
         Control.Monad.replicateM_ 10 $ putStrLn "Hello World."
         
 ```
+
+&emsp;&emsp;&emsp;&emsp;on C#:
+```
+        //running on mono-csharp-shell
+        Enumerable.Range(0,10).ToList().ForEach(i=>Console.WriteLine("Hello World."));
+        
+```
+
 
 > 废话对我来来说就是：这很对，但我知道。
