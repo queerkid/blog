@@ -16,4 +16,4 @@ echo $articlelist >> index.html
 cat ./index_last.html >> index.html
 
 # go github and look my blog
-git add -A && git commit -m "lalala" && git push   && xdg-open "http:techrat.xyz"
+#git add -A && git commit -m "lalala" && git push   && xdg-open "http:techrat.xyz"
