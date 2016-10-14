@@ -6,7 +6,11 @@
   <meta name="generator" content="pandoc" />
   <title>Csharp and Haskell differences</title>
   <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="../stylesheets/style.css" type="text/css" />
+  <link rel="stylesheet" href="../stylesheets/style.dark.css" type="text/css" />
+  
+  <link rel="stylesheet" href="../stylesheets/highlightjs-styles/solarized-dark.css" type="text/css">
+  <script src="../javascript/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 <div id="header">
@@ -16,14 +20,16 @@
 <p>最讨厌翻译的不好还满是错别字的书了。</p>
 </blockquote>
 <ol style="list-style-type: decimal">
-<li><p>repeat do something:</p>
-<p>on C#:</p>
-<pre><code>Action pr_hw = () =&gt;WriteLine(&quot;Hello World.&quot;);
-Enumerable.Range(0,10).ToList().ForEach(i=&gt;pr_hw());</code></pre>
-<p>on Haskell:</p>
-<pre><code>let pr_hw = print &quot;Hello World&quot;
-replicateM_ 10 pr_hw</code></pre></li>
+<li>repeat do something:</li>
 </ol>
+<p>    on C#:</p>
+<pre><code>        Action pr_hw = () =&gt;WriteLine(&quot;Hello World.&quot;);
+        Enumerable.Range(0,10).ToList().ForEach(i=&gt;pr_hw());</code></pre>
+<p>    on Haskell:</p>
+<pre><code>        let pr_hw = print &quot;Hello World&quot;
+        replicateM_ 10 pr_hw
+        -- or
+        let rep10pr_hw = replicateM_ 10 $ print &quot;Hello World&quot;</code></pre>
 <blockquote>
 <p>废话对我来来说就是：这很对，但我知道。</p>
 </blockquote>

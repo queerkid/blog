@@ -6,7 +6,11 @@
   <meta name="generator" content="pandoc" />
   <title>反反复复反复</title>
   <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="../stylesheets/style.css" type="text/css" />
+  <link rel="stylesheet" href="../stylesheets/style.dark.css" type="text/css" />
+  
+  <link rel="stylesheet" href="../stylesheets/highlightjs-styles/solarized-dark.css" type="text/css">
+  <script src="../javascript/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 <div id="header">
@@ -17,21 +21,20 @@
 </blockquote>
 <p>今天闲来无事用Racket实现了<a href="http://www.ruanyifeng.com/blog/2010/10/why_lisp_is_superior.html">&lt;<黑客与画家>&gt;</a>中的那个“神奇”的要求。</p>
 <p>代码如下：</p>
-<pre><code>(define (foo n)
-    (lambda (i) (begin (set! n (+ n 1)) n)))</code></pre>
-<p>对了，前几天实现了。</p>
-<p>C# ：</p>
-<pre><code>Func&lt;dynamic, Func&lt;dynamic, dynamic&gt;&gt; foo = n =&gt; i =&gt; n += i;</code></pre>
+<pre><code>    (define (foo n)
+        (lambda (i) (begin (set! n (+ n 1)) n)))</code></pre>
+<p>对了，前几天实现了。 C# ：</p>
+<pre><code>    Func&lt;dynamic, Func&lt;dynamic, dynamic&gt;&gt; foo = n =&gt; i =&gt; n += i;</code></pre>
 <p>还有F# ：</p>
-<pre><code>// let inline foo n = fun i -&gt; n + i
-// 好吧，我错了，其实这么写就可以：
-let f n i = n + i</code></pre>
+<pre><code>    let inline foo n = fun i -&gt; n + i
+    // 好吧，我错了，其实这么写就可以：
+    let f n i = n + i</code></pre>
 <p>再来个Haskell版本的：</p>
-<pre><code>--let f n = (\i -&gt; n + i)
---好吧，我错了，其实这么写就可以：
-let f n i = n + i
---这是看趣学指南时想到的，试了下hlint告诉我这么写才是对的，🙄。
---自动柯里化成一个返回函数的函数。哈哈哈。</code></pre>
+<pre><code>    let f n = (\i -&gt; n + i)
+    --好吧，我错了，其实这么写就可以：
+    let f n i = n + i
+    --这是看趣学指南时想到的，试了下hlint告诉我这么写才是对的，🙄。
+    --自动柯里化成一个返回函数的函数。哈哈哈。</code></pre>
 <p>2333，最近专业业余研究哈思考，哈哈哈哈。</p>
 <p><strong>其实我不太确定上面的写法是否符合题目的要求，非要用+=运算符吗？适用的类型又有哪些要求呢？（我又想到，纯函数式的PL变量是不可变类型，就不能用自增之类的操作符啊啊啊……） C#版本至少能实现数值类型和字符串类型的运算，还能实现timespan类型的相加，还能实现datime加timespan类型(必须是datetime在前，timespan在后)。 还有python的实现版本可以实现list相加，ruby的版本可以实现array相加，js的实现版本虽然能使array相加，可是结果却是string。</strong></p>
 <p> </p>
@@ -40,7 +43,7 @@ let f n i = n + i
 2. github pages 不支持中文路径？</code></pre>
 <p>尾巴：</p>
 <p>我又被IEEE-745恶心到了……Racket团队也是实在人……</p>
-<pre><code>(+ 2.33 2.22)</code></pre>
+<pre><code>    (+ 2.33 2.22)</code></pre>
 <blockquote>
 <p>愿能观万事而晓大道</p>
 </blockquote>
