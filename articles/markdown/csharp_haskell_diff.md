@@ -10,7 +10,8 @@
 &emsp;&emsp;&emsp;&emsp;on Haskell:
 ```
         --running on ghci
-        Control.Monad.replicateM_ 10 $ putStrLn "Hello World."
+        import Control.Monad
+        replicateM_ 10 $ putStrLn "Hello World."
         
 ```
 

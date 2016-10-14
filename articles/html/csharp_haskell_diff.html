@@ -24,7 +24,8 @@
 </ol>
 <p>    on Haskell:</p>
 <pre><code>        --running on ghci
-        Control.Monad.replicateM_ 10 $ putStrLn &quot;Hello World.&quot;
+        import Control.Monad
+        replicateM_ 10 $ putStrLn &quot;Hello World.&quot;
         </code></pre>
 <p>    on C#:</p>
 <pre><code>        //running on mono-csharp-shell
