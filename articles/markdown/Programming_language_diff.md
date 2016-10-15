@@ -34,7 +34,7 @@
 &emsp;&emsp;&emsp;&emsp;on Haskell:
 ```
         --running on ghci
-        maxodd nums = maximum $ filter odd nums
+        let maxodd nums = maximum $ filter odd nums
         
 ```
 &emsp;&emsp;&emsp;&emsp;on Python:
