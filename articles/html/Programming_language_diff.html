@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Csharp and Haskell differences</title>
+  <title>The differences between programming languages.</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="../stylesheets/style.dark.css" type="text/css" />
   
@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="header">
-<h1 class="title">Csharp and Haskell differences</h1>
+<h1 class="title">The differences between programming languages.</h1>
 </div>
 <blockquote>
 <p>最讨厌翻译的不好还满是错别字的书了。</p>
@@ -31,8 +31,24 @@
 <pre><code>        //running on mono-csharp-shell
         Enumerable.Range(0,10).ToList().ForEach(i=&gt;Console.WriteLine(&quot;Hello World.&quot;));
         </code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>get max odd number in seq:</li>
+</ol>
+<p>    on C#:</p>
+<pre><code>        //running on mono-csharp-shell
+        Func&lt;IEnumerable&lt;int&gt;,int&gt; maxodd = nums =&gt; nums.Where(n=&gt;n % 2 == 1).Max();
+        </code></pre>
+<p>    on Haskell:</p>
+<pre><code>        --running on ghci
+        maxodd nums = maximum $ filter odd nums
+        </code></pre>
+<p>    on Python:</p>
+<pre><code>        #running on idle
+        maxodd = lambda nums : max(filter((lambda x : x % 2),nums))
+        #^_^，I learn python for many years.
+        </code></pre>
 <blockquote>
-<p>废话对我来来说就是：这很对，但我知道。</p>
+<p>废话对我来说就是：这很对，但我知道。</p>
 </blockquote>
 </body>
 </html>
