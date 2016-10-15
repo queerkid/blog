@@ -33,6 +33,7 @@
 
 &emsp;&emsp;&emsp;&emsp;on Haskell:
 ```
+        import Control.Monad -- just for syntax highlighting.
         --running on ghci
         let maxodd nums = maximum $ filter odd nums
         

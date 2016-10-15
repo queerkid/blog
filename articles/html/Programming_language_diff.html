@@ -39,7 +39,8 @@
         Func&lt;IEnumerable&lt;int&gt;,int&gt; maxodd = nums =&gt; nums.Where(n=&gt;n % 2 == 1).Max();
         </code></pre>
 <p>    on Haskell:</p>
-<pre><code>        --running on ghci
+<pre><code>        import Control.Monad -- just for syntax highlighting.
+        --running on ghci
         let maxodd nums = maximum $ filter odd nums
         </code></pre>
 <p>    on Python:</p>
