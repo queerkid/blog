@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>logging linux command</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../stylesheets/style.dark.css" type="text/css" />
+  
+  <link rel="stylesheet" href="../stylesheets/highlightjs-styles/solarized-dark.css" type="text/css">
+  <script src="../javascript/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div id="header">
+<h1 class="title">logging linux command</h1>
+</div>
+<ol style="list-style-type: decimal">
+<li><p>regex find then remove</p>
+<pre><code>find dir_name -regextype sed -regex &quot;patten&quot; -exec rm -r &quot;{}&quot; \;     </code></pre>
+<p>example:</p>
+<pre><code>sudo find /usr/ -regextype sed -regex &quot;.*youdao.*&quot; -exec rm -r &quot;{}&quot; \;
+#我用它删了有道辞典，因为在ubuntu16.10上不能用。</code></pre></li>
+</ol>
+</body>
+</html>
