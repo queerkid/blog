@@ -18,10 +18,15 @@
 </div>
 <ol style="list-style-type: decimal">
 <li><p>regex find then remove</p>
-<pre><code>find dir_name -regextype sed -regex &quot;pattern&quot; -exec rm -r &quot;{}&quot; \;     </code></pre>
+<pre><code>find path -regextype sed -regex &quot;pattern&quot; -exec rm -r &quot;{}&quot; \;    
+#or
+find path -regextype sed -regex &quot;pattern&quot; -delete</code></pre>
 <p>example:</p>
 <pre><code>sudo find /usr/ -regextype sed -regex &quot;.*youdao.*&quot; -exec rm -r &quot;{}&quot; \;
-#我用它删了有道辞典，因为在ubuntu16.10上不能用。</code></pre></li>
+#我用它删了有道辞典，因为在ubuntu16.10上不能用。
+#or
+find . -regextype sed -regex &quot;^$&quot; -delete
+#安啦，不会删掉任何文件的。</code></pre></li>
 </ol>
 </body>
 </html>
