@@ -2,7 +2,7 @@
 
 1. regex find then remove
 ```
-find dir_name -regextype sed -regex "patten" -exec rm -r "{}" \;     
+find dir_name -regextype sed -regex "pattern" -exec rm -r "{}" \;     
 ```
 example:
 ```
