@@ -19,6 +19,6 @@
 <p>Haskell:</p>
 <pre><code>filter (\n-&gt;sum [ (digitToInt i)^3 | i&lt;-show n] == n) [100..999]</code></pre>
 <p>Python:</p>
-<pre><code>[x for x in filter(lambda n:sum([int(i)**3 for i in str(n)]) == n,range(100,1000))]</code></pre>
+<pre><code>list(filter(lambda n:sum([int(i)**3 for i in str(n)]) == n,range(100,1000)))</code></pre>
 </body>
 </html>
