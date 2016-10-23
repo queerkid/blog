@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>水仙花数</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../stylesheets/style.dark.css" type="text/css" />
+  
+  <link rel="stylesheet" href="../stylesheets/highlightjs-styles/solarized-dark.css" type="text/css">
+  <script src="../javascript/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div id="header">
+<h1 class="title">水仙花数</h1>
+</div>
+<p>Haskell:</p>
+<pre><code>filter (\n-&gt;sum [ (digitToInt i)^3 | i&lt;-show n] == n) [100..999]</code></pre>
+<p>Python:</p>
+<pre><code>[x for x in filter(lambda n:sum([int(i)**3 for i in str(n)]) == n,range(100,1000))]</code></pre>
+</body>
+</html>
