@@ -48,6 +48,17 @@
         maxodd = lambda nums : max(filter((lambda x : x % 2),nums))
         #^_^，I learn python for many years.
         </code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Narcissistic number:</li>
+</ol>
+<p>    Haskell:</p>
+<pre><code>        filter (\n-&gt;sum [ (digitToInt i)^3 | i&lt;-show n] == n) [100..999]
+
+        filter (\n-&gt;sum [ (digitToInt i)^(length $ show n) | i&lt;-show n] == n) [0..]</code></pre>
+<p>    Python:</p>
+<pre><code>        list(filter(lambda n:sum([int(i)**3 for i in str(n)]) == n,range(100,1000)))
+
+        list(filter(lambda n:sum([int(i)**len(str(n)) for i in str(n)]) == n,range(1000000)))</code></pre>
 <blockquote>
 <p>废话对我来说就是：这很对，但我知道。</p>
 </blockquote>

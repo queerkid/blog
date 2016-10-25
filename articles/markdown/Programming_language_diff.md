@@ -46,4 +46,20 @@
         
 ```
 
+3. Narcissistic number:
+
+&emsp;&emsp;&emsp;&emsp;Haskell:
+```
+        filter (\n->sum [ (digitToInt i)^3 | i<-show n] == n) [100..999]
+
+        filter (\n->sum [ (digitToInt i)^(length $ show n) | i<-show n] == n) [0..]
+```
+
+&emsp;&emsp;&emsp;&emsp;Python:
+```
+        list(filter(lambda n:sum([int(i)**3 for i in str(n)]) == n,range(100,1000)))
+
+        list(filter(lambda n:sum([int(i)**len(str(n)) for i in str(n)]) == n,range(1000000)))
+```
+
 > 废话对我来说就是：这很对，但我知道。
