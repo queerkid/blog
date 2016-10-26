@@ -6,7 +6,7 @@ for md in ./articles/markdown/*.md; do
     fn=(${arr[3]//.md/}) #file name
     pandoc -s "$md" -o ./articles/html/${fn}.html  -H header.html
     fl=$(head -1 ${md}) #file first line  
-    node='<p><a href="articles/html/'${fn}.html'">'${fl:1}'</a></p>' #fl:1 is tile
+    node='\n<p><a href="articles/html/'${fn}.html'">'${fl:1}'</a></p>' #fl:1 is tile
     articlelist+=$node
 done
 
