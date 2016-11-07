@@ -84,8 +84,46 @@
 
 &emsp;&emsp;&emsp;&emsp; 这个只有副作用有用的序列操作符不太适合我。
 
-[to be continued](#maybe).
+5.
 
+&emsp;&emsp;&emsp;&emsp; The second reason is that doing so adds zero new representational power to the language. Doing this lets you rewrite this perfectly clear code:
 
+&emsp;&emsp;&emsp;&emsp; 第二个原因是,这样做没有增加新的表达能力到这个语言。这样做可以让你重写这个完美清晰的代码:
+
+``` 
+	foreach(Foo foo in foos){ statement involving foo; }
+```
+&emsp;&emsp;&emsp;&emsp; into this code:
+```
+	foos.ForEach((Foo foo)=>{ statement involving foo; });
+```
+&emsp;&emsp;&emsp;&emsp; which uses almost exactly the same characters in slightly different order. And yet the second version is harder to understand, harder to debug, and introduces closure semantics, thereby potentially changing object lifetimes in subtle ways.
+
+&emsp;&emsp;&emsp;&emsp; 这两种使用几乎完全相同的字符，只是顺序略有不同。但第二个版本更难理解，更难去调试，并引入了闭包语义，从而有可能以微妙的方式改变对象生存周期。
+
+&emsp;&emsp;&emsp;&emsp; When we provide two subtly different ways to do exactly the same thing, we produce confusion in the industry, we make it harder for people to read each other’s code, and so on. 
+
+&emsp;&emsp;&emsp;&emsp; 当我们提供两种完全不同的方式做同样的事情时，我们这是在行业中制造混乱，我们使人们更难阅读他人的代码，等等。
+
+&emsp;&emsp;&emsp;&emsp; Sometimes the benefit added by having two different textual representations for one operation (like query expressions versus their underlying method call form, or + versus String.Concat) is so huge that it’s worth the potential confusion. 
+
+&emsp;&emsp;&emsp;&emsp; 有时，一个操作（例如查询表达式与它们的底层方法调用形式，或+与String.Concat）具有两种不同的文本表示，增加的好处是巨大的，以至于潜在的混淆是值得的。
+
+&emsp;&emsp;&emsp;&emsp; But the compelling benefit of query expressions is their readability; this new form of “foreach” is certainly no more readable than the “normal” form and is arguably worse.
+
+&emsp;&emsp;&emsp;&emsp; 但是查询表达式的引人注目的好处是它们的可读性; 这种新形式的“foreach”肯定不比“正常”形式更可读，并且可以说更糟。
+
+&emsp;&emsp;&emsp;&emsp; If you don’t agree with these philosophical objections and find practical value in this pattern, by all means, go ahead and write this trivial one-liner yourself.
+
+&emsp;&emsp;&emsp;&emsp; 如果你不同意这些哲学的反对意见，并在这种模式中找到实用的价值，无论如何,自己去写这个微不足道的一行程序。
+
+&emsp;&emsp;&emsp;&emsp; UPDATE: [The method in question has been removed from the “Metro” version of the base class library.](https://social.msdn.microsoft.com/Forums/en-US/758f7b98-e3ce-41e5-82a2-109f1df446c2/where-is-listtforeach?forum=winappswithcsharp)
+
+[The End](#maybe).
+
+写在最后的话：
+	通过翻译这篇文章，我深刻的意识到自己的不足，在英语方面，在计算机方面。尽管前路坎坷，我依然想去那里看看。
+	大多数语句都是通过google、bing、youdao的翻译网站，对比、截取、润色而成。
+	我没有经过授权，如果侵权联系[我](mailto:techrat@gmail.com)删掉。
 
 [^404ed]: this page 404ed!
