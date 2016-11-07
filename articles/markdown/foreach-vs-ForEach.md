@@ -126,4 +126,7 @@
 	大多数语句都是通过google、bing、youdao的翻译网站，对比、截取、润色而成。
 	我没有经过授权，如果侵权联系[我](mailto:techrat@gmail.com)删掉。
 
+
+I have not been authorized to contact [me](mailto:techrat@gmail.com) if the infringement.
+
 [^404ed]: this page 404ed!
