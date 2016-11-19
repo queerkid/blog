@@ -1,4 +1,4 @@
-% Some Topic
+% Some code snippets
 
 > 最讨厌翻译的不好还满是错别字的书了。
 
