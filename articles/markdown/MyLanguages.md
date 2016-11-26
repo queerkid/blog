@@ -1,4 +1,4 @@
-% Some code snippets
+% My Languages
 
 > 最讨厌翻译的不好还满是错别字的书了。
 
@@ -61,5 +61,17 @@
 
         list(filter(lambda n:sum([int(i)**len(str(n)) for i in str(n)]) == n,range(1000000)))
 ```
+
+4. map print 
+
+&emsp;&emsp;&emsp;&emsp;Haskell:
+```
+        mapM print [1..5]
+```
+
+&emsp;&emsp;&emsp;&emsp;Python:
+```
+        list(map(print,range(1,6)))
+ ```
 
 > 废话对我来说就是：这很对，但我知道。
