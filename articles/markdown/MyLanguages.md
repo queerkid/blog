@@ -72,7 +72,7 @@
 &emsp;&emsp;&emsp;&emsp;Python:
 ```
         list(map(print,range(1,6)))
- ```
+```
 
 
 5. wonderful dynamic，缘起SICP中介绍的应用序求值

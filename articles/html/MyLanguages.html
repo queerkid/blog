@@ -65,26 +65,21 @@
 <p>    Haskell:</p>
 <pre><code>        mapM print [1..5]</code></pre>
 <p>    Python:</p>
-<pre><code>        list(map(print,range(1,6)))
- ```
+<pre><code>        list(map(print,range(1,6)))</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>wonderful dynamic，缘起SICP中介绍的应用序求值</li>
+</ol>
+<p>    Python:</p>
+<pre><code>        f = lambda n : print(&quot;lala&quot;)
+        f(print(&quot;haha&quot;))</code></pre>
+<p>    JavaScript:</p>
+<pre><code>        let f = n =&gt; console.log(&quot;lala&quot;)
+        f(console.log(&quot;haha&quot;))</code></pre>
+<p>    Racket:</p>
+<pre><code>        (define (f n)
+                (displayln &quot;lala&quot;))
 
-
-5. wonderful dynamic，缘起SICP中介绍的应用序求值
-
-&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Python:</code></pre>
-<pre><code>    f = lambda n : print(&quot;lala&quot;)
-    f(print(&quot;haha&quot;))</code></pre>
-<pre><code>
-&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;JavaScript:</code></pre>
-<pre><code>    let f = n =&gt; console.log(&quot;lala&quot;)
-    f(console.log(&quot;haha&quot;))</code></pre>
-<pre><code>
-&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Racket:</code></pre>
-<pre><code>    (define (f n)
-            (displayln &quot;lala&quot;))
-
-    (f (displayln &quot;haha&quot;))</code></pre>
-<p>```</p>
+        (f (displayln &quot;haha&quot;))</code></pre>
 <blockquote>
 <p>废话对我来说就是：这很对，但我知道。</p>
 </blockquote>
