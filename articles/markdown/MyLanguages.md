@@ -80,12 +80,14 @@
 &emsp;&emsp;&emsp;&emsp;Python:
 ```
         f = lambda n : print("lala")
+        
         f(print("haha"))
 ```
 
 &emsp;&emsp;&emsp;&emsp;JavaScript:
 ```
         let f = n => console.log("lala")
+
         f(console.log("haha"))
 ```
 
