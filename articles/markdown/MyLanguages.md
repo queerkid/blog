@@ -74,4 +74,30 @@
         list(map(print,range(1,6)))
  ```
 
+
+5. wonderful dynamic，缘起SICP中介绍的应用序求值
+
+&emsp;&emsp;&emsp;&emsp;Python:
+```
+        f = lambda n : print("lala")
+        f(print("haha"))
+```
+
+&emsp;&emsp;&emsp;&emsp;JavaScript:
+```
+        let f = n => console.log("lala")
+        f(console.log("haha"))
+```
+
+&emsp;&emsp;&emsp;&emsp;Racket:
+```
+        (define (f n)
+                (displayln "lala"))
+
+        (f (displayln "haha"))
+```
+
+
+
 > 废话对我来说就是：这很对，但我知道。
+
